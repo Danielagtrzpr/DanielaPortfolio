@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
 
 @theme {
+    
     --color-primary: hsl(214, 100%, 50%);
-    --color-background: hsl(240, 10%, 3.92%);
+    --color-background:hsl(213.3 100% 98.24%);
+    --text-color-ligth: hsl(240, 10%, 3.92%);
+
+    --color-background-dark: hsl(240, 10%, 3.92%);
+    --text-color-dark: hsl(213.3 100% 98.24%);
 }
 
