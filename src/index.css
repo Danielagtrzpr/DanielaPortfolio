@@ -2,6 +2,7 @@
 
 
 @theme {
-    --color-primary: hsl(214, 100%, 50%)
+    --color-primary: hsl(214, 100%, 50%);
+    --color-background: hsl(240, 10%, 3.92%);
 }
 
