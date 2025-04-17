@@ -12,3 +12,11 @@
     --text-color-dark: hsl(213.3 100% 98.24%);
 }
 
+@layer base {
+    .bg-apple-gradient {
+        @apply bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500;
+    }
+    .text-apple-gradient {
+        @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500;
+    }
+}
