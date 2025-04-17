@@ -7,7 +7,7 @@ function App() {
   return (
     <div className='bg-background min-h-screen dark:bg-background-dark'>
       <Header/>
-      <main className='mx-8 flex flex-col items-center justify-center h-screen'>
+      <main className='relative pt-30 flex flex-col items-center justify-center h-screen'>
         <Presentation/>
       </main>
     </div>
