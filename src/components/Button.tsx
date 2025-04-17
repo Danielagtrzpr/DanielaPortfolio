@@ -9,7 +9,7 @@ type ButtonProps = {
 function Button({value, buttonType=ButtonType.primary}: ButtonProps) {
   return (
     <motion.button 
-    className={`flex justify-center items-center text-base py-2 px-6 rounded-full ${buttonType}`}
+    className={`flex justify-center items-center text-xs  sm:text-base py-2 px-6 rounded-full ${buttonType}`}
     whileHover={{ 
         scale: 1.05 ,
         opacity: 0.8,
