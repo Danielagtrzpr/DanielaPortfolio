@@ -5,6 +5,7 @@ import Presentation from './components/Presentation'
 import Projects from './components/Projects'
 import Footer from './components/Footer'
 import Contact from './components/Contact'
+import FollowCursor from './components/FollowCursor'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <div className='bg-background min-h-screen dark:bg-background-dark'>
       <Header/>
       <main className='relative flex flex-col items-center justify-center'>
+        <FollowCursor/>
         <Presentation/>
         <Projects/>
         <AboutMe/>
