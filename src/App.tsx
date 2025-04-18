@@ -10,7 +10,7 @@ import FollowCursor from './components/FollowCursor'
 function App() {
 
   return (
-    <div className='bg-background min-h-screen dark:bg-background-dark'>
+    <div className='relative bg-background min-h-screen dark:bg-background-dark'>
       <Header/>
       <main className='relative flex flex-col items-center justify-center'>
         <FollowCursor/>
