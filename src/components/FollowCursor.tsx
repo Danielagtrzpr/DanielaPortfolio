@@ -32,7 +32,7 @@ function FollowCursor() {
   const { x, y } = useFollowPointer(ref);
 
   return (
-    <div className="fixed inset-0 z-20">
+    <div className="fixed inset-0">
       <motion.div
         className="w-10 h-10 bg-apple-gradient rounded-full blur-xl animate-pulse"
         ref={ref}
