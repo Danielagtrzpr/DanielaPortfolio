@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { projects } from "../data/index";
+import CardProject from "./CardProject";
 
 export const DynamicGrid = () => {
 
@@ -26,9 +27,7 @@ export const DynamicGrid = () => {
               className={`col-span-1 ${colSpan} bg-gray-100 text-primary p-4 rounded-4xl cursor-pointer hover:bg-gray-200 transition-all duration-300 ease-in-out`}
               onClick={()=>handleClick(index)}
             >
-                <div>
-                    {item.title}
-                </div>
+              <CardProject item={item}/>
             </motion.div>
           );
         })}
