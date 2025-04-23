@@ -4,8 +4,7 @@ import { ButtonType } from "../enums"
 
 function Contact() {
   return (
-    <section className="relative inset-0 w-full flex flex-col justify-center items-center h-screen">
-        <h2 className="text-apple-gradient text-4xl">Get In Touch</h2>
+    <section id="contact" className="relative inset-0 w-full flex flex-col justify-center items-center h-screen">
         <div className="flex mt-20 text-background">
           <div className="flex flex-col justify-center space-y-4 bg-apple-gradient rounded-xl p-8">
             <h2 className="font-bold text-2xl py-2">Contact Information</h2>

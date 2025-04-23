@@ -3,8 +3,7 @@ import img11 from "../assets/PlaygroundImage11.jpg";
 
 function AboutMe() {
   return (
-    <section className="relative mt-20 pt-20 px-8 inset-0 w-full flex flex-col justify-center h-screen">
-      <h2 className="pb-8 text-apple-gradient text-4xl mx-auto">About Me</h2>
+    <section id="about" className="relative mt-20 pt-20 px-8 inset-0 w-full flex flex-col justify-center h-screen">
       <div className="flex flex-col justify-center text-xs md:m-8 md:gap-8 md:flex-row md:text-base">
         <div className="flex flex-col flex-1/2 items-center justify-center">
           <p className="text-justify mt-4 text-gray-500">

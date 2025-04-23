@@ -5,7 +5,7 @@ import Button from "./Button";
 
 function Presentation() {
   return (
-    <section className="relative inset-0 w-full flex flex-col justify-center h-screen">
+    <section id="home" className="relative inset-0 w-full flex flex-col justify-center h-screen">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-90 h-90 bg-apple-gradient opacity-10 rounded-full filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/3 right-1/3 w-60 h-60 bg-apple-gradient opacity-10 rounded-full filter blur-3xl animate-pulse [animation-delay:2s]"></div>
@@ -32,7 +32,7 @@ function Presentation() {
             />
         </div>
       </div>
-      <ChevronDown className="text-primary w-full animate-bounce"/>
+      <ChevronDown className="relative z-20 text-primary text-lg mb-10 w-full animate-bounce"/>
     </section>
   );
 }
