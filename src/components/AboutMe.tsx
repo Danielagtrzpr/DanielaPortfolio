@@ -3,8 +3,8 @@ import img11 from "../assets/PlaygroundImage11.jpg";
 
 function AboutMe() {
   return (
-    <section id="about" className="relative mt-20 pt-20 px-8 inset-0 w-full flex flex-col justify-center h-screen">
-      <div className="flex flex-col justify-center text-xs md:m-8 md:gap-8 md:flex-row md:text-base">
+    <section id="about" className="relative px-8 inset-0 w-full flex flex-col justify-center h-screen">
+      <div className="grid text-xs overflow-y-scroll no-scrollbar md:m-8 md:gap-8 md:grid-cols-2 md:text-base">
         <div className="flex flex-col flex-1/2 items-center justify-center">
           <p className="text-justify mt-4 text-gray-500">
           I'm a passionate frontend developer specializing in React and React Native. 
@@ -16,7 +16,7 @@ function AboutMe() {
           I enjoy solving complex UI challenges and creating seamless experiences across different devices.
           </p>
         <div className="flex flex-col gap-8 mt-4 sm:flex-row">
-          <div className="border-2 w-full sm:flex-1/2 border-gray-200 rounded-2xl p-8">
+          <div className="border-2 w-full border-gray-200 rounded-2xl p-8">
             <h2 className="font-bold text-xl">Skills</h2>
             <div className="flex flex-col mt-2">
               <ul className="flex flex-col gap-2">
@@ -30,7 +30,7 @@ function AboutMe() {
               </ul>
             </div>
           </div>
-          <div className="border-2 w-full sm:flex-1/2 border-gray-200  rounded-2xl p-8">
+          <div className="border-2 w-full border-gray-200  rounded-2xl p-8">
             <h2 className="font-bold text-xl">Interest</h2>
             <div className="flex flex-col mt-2">
               <ul className="flex flex-col gap-2">
@@ -44,7 +44,7 @@ function AboutMe() {
         </div>
 
         </div>
-        <div className="p-8 flex flex-1/2 items-center justify-center">
+        <div className="p-8 flex items-center justify-center">
           <img src={img11} alt="" className="rounded-4xl" />
         </div>
       </div>

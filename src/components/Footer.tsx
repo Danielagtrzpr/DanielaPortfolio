@@ -3,7 +3,7 @@ import { motion } from "motion/react"
 
 function Footer() {
   return (
-    <footer className="py-12 relative border-t border-gray-300">      
+    <footer className="relative flex border-t border-gray-300 h-screen text-xs md:text-base md:py-12 md:h-auto">      
       <div className="mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
@@ -57,7 +57,7 @@ function Footer() {
         </div>
         
         <div className="pt-6 mt-6 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-sm border-2 md:order-1 mt-4 md:mt-0">
+          <div className="text-sm md:order-1 mt-4 md:mt-0">
             © {new Date().getFullYear()} Daniela Gutierrez. All rights reserved.
           </div>
           

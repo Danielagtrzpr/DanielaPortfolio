@@ -4,21 +4,21 @@ import { ButtonType } from "../enums"
 
 function Contact() {
   return (
-    <section id="contact" className="relative inset-0 w-full flex flex-col justify-center items-center h-screen">
-        <div className="flex mt-20 text-background">
-          <div className="flex flex-col justify-center space-y-4 bg-apple-gradient rounded-xl p-8">
-            <h2 className="font-bold text-2xl py-2">Contact Information</h2>
-            <ul className="flex flex-col  justify-center gap-4">
-              <li className="flex gap-2"><Mail/><p>danielagp96@gmail.com</p></li>
-              <li className="flex gap-2"><Locate/><p>Mexico</p></li>
-              <li className="flex gap-2"><Linkedin/><p>https://www.linkedin.com/in/danielacode/</p></li>
-              <li className="flex gap-2"><Github/><p>https://github.com/Danielagtrzpr</p></li>
+    <section id="contact" className="relative inset-0 w-full px-8 flex flex-col justify-center items-center h-screen text-xs md:text-base lg:text-lg">
+        <div className="w-fit text-background grid md:grid-cols-2 lg:w-full lg:px-40 md:space-x-4">
+          <div className="flex flex-col justify-center space-y-4 bg-primary rounded-xl p-4 md:p-8">
+            <h2 className="font-bold text-center py-2 md:text-left">Contact Information</h2>
+            <ul className="flex flex-col w-full justify-center gap-4">
+              <li className="flex flex-col justify-center items-center w-full flex-wrap md:flex-row md:justify-start md:gap-2"><Mail/><p className="flex flex-wrap">danielagp96@gmail.com</p></li>
+              <li className="flex flex-col justify-center items-center w-full flex-wrap md:flex-row md:justify-start md:gap-2"><Locate/><p className="flex flex-wrap">Mexico</p></li>
+              <li className="flex flex-col justify-center items-center w-full flex-wrap md:flex-row md:justify-start md:gap-2"><Linkedin/><p className="flex flex-wrap">https://www.linkedin.com/in/danielacode/</p></li>
+              <li className="flex flex-col justify-center items-center w-full flex-wrap md:flex-row md:justify-start md:gap-2"><Github/><p className="flex flex-wrap">https://github.com/Danielagtrzpr</p></li>
             </ul>
-            <p>Looking forward to hearing from you!</p>
+            <p className="font-bold text-center py-2 md:text-left">Looking forward to hearing from you!</p>
           </div>
-          <div className="flex flex-col justify-center space-y-4 rounded-xl p-8 ml-8 text-background-dark">
+          <div className="flex flex-col justify-center space-y-4 rounded-xl text-background-dark shadow-2xl p-4 md:p-8">
             <section>
-              <h2 className="font-bold text-2xl py-2">Contact Form</h2>
+              <h2 className="font-bold py-2">Contact Form</h2>
               <form className="flex flex-col gap-4">
                 <input type="text" placeholder="Name" className="p-2 rounded-md"/>
                 <input type="email" placeholder="Email" className="p-2 rounded-md"/>
