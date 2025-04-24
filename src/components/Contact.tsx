@@ -16,14 +16,14 @@ function Contact() {
             </ul>
             <p className="font-bold text-center py-2 md:text-left">Looking forward to hearing from you!</p>
           </div>
-          <div className="flex flex-col justify-center space-y-4 rounded-xl text-background-dark shadow-2xl p-4 md:p-8">
+          <div className="flex flex-col justify-center space-y-4 rounded-xl text-background-dark dark:text-background  shadow-2xl shadow-primary/40 p-4 md:p-8">
             <section>
               <h2 className="font-bold py-2">Contact Form</h2>
               <form className="flex flex-col gap-4">
                 <input type="text" placeholder="Name" className="p-2 rounded-md"/>
                 <input type="email" placeholder="Email" className="p-2 rounded-md"/>
                 <textarea placeholder="Message" className="p-2 rounded-md"></textarea>
-                <Button buttonType={ButtonType.appleGradient} value="Send"/>
+                <Button buttonType={ButtonType.primary} value="Send"/>
               </form>
             </section>
           </div>

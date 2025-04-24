@@ -24,7 +24,7 @@ function Presentation() {
             <Button value="Contact Me" buttonType={ButtonType.background}/>
           </div>
         </div>
-        <div className="rounded-full w-50 p-1 bg-background shadow-xl/20 dark:bg-background-dark order-1 md:order-2 md:w-80">
+        <div className="rounded-full w-50 shadow-xl shadow-primary/20  order-1 md:order-2 md:w-80">
             <img
             src={profilePic}
             alt="profile picture"

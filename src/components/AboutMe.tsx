@@ -15,8 +15,8 @@ function AboutMe() {
           and I've been working with React ecosystems for most of that time. 
           I enjoy solving complex UI challenges and creating seamless experiences across different devices.
           </p>
-        <div className="flex flex-col gap-8 mt-4 sm:flex-row">
-          <div className="border-2 w-full border-gray-200 rounded-2xl p-8">
+        <div className="flex flex-col gap-8 mt-4 text-background-dark dark:text-background sm:flex-row">
+          <div className="border-1 w-full border-primary rounded-2xl p-8">
             <h2 className="font-bold text-xl">Skills</h2>
             <div className="flex flex-col mt-2">
               <ul className="flex flex-col gap-2">
@@ -30,7 +30,7 @@ function AboutMe() {
               </ul>
             </div>
           </div>
-          <div className="border-2 w-full border-gray-200  rounded-2xl p-8">
+          <div className="border-1 w-full border-primary  rounded-2xl p-8">
             <h2 className="font-bold text-xl">Interest</h2>
             <div className="flex flex-col mt-2">
               <ul className="flex flex-col gap-2">
