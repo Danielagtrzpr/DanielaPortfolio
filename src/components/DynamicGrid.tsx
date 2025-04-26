@@ -24,7 +24,7 @@ export const DynamicGrid = () => {
             <motion.div
               key={index}
               layoutId={`item-${index}`}
-              className={`col-span-1 ${colSpan} bg-gray-100 text-primary p-4 rounded-4xl cursor-pointer hover:bg-gray-200 transition-all duration-300 ease-in-out`}
+              className={`col-span-1 ${colSpan} bg-gray-100 text-primary rounded-4xl cursor-pointer`}
               onClick={()=>handleClick(index)}
             >
               <CardProject item={item}/>

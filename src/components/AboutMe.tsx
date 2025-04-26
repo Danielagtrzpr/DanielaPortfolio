@@ -1,7 +1,16 @@
 import { Binary, BookLock, BugPlay, Code, Code2, Computer, SquareTerminal } from "lucide-react";
 import img11 from "../assets/PlaygroundImage11.jpg";
+import { useEffect, useState } from "react";
 
 function AboutMe() {
+  const [image, setImage] = useState<string>("");
+  
+  useEffect(() => {
+    const randomSeed = Math.floor(Math.random() * 1000); // Opcional: para randomizar
+    const imageUrl = `https://picsum.photos/seed/${randomSeed}/2000`;
+    setImage(imageUrl);
+  }, []);
+    
   return (
     <section id="about" className="relative px-8 inset-0 w-full flex flex-col justify-center h-screen">
       <div className="grid text-xs overflow-y-scroll no-scrollbar md:m-8 md:gap-8 md:grid-cols-2 md:text-base">
@@ -45,7 +54,7 @@ function AboutMe() {
 
         </div>
         <div className="p-8 flex items-center justify-center">
-          <img src={img11} alt="" className="rounded-4xl" />
+          <img src={image} alt="" className="w-full h-full object-cover rounded-4xl" />
         </div>
       </div>
     </section>
