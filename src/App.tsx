@@ -6,18 +6,21 @@ import Projects from './components/Projects'
 import Footer from './components/Footer'
 import Contact from './components/Contact'
 import FollowCursor from './components/FollowCursor'
+import { useScrollPosition } from './hooks/useScrollPosition'
 
 function App() {
 
+  const scrollPosition = useScrollPosition(); 
+
   return (
     <div className='relative bg-background min-h-screen dark:bg-background-dark scroll-smooth'>
-      <Header/>
+      <Header scrollPosition={scrollPosition}/>
       <main className='relative flex flex-col items-center justify-center'>
         <FollowCursor/>
-        <Presentation/>
-        <Projects/>
-        <AboutMe/>
-        <Contact/>
+        <Presentation currentSection = {scrollPosition.currentSection}/>
+        <Projects currentSection = {scrollPosition.currentSection}/>
+        <AboutMe currentSection = {scrollPosition.currentSection}/>
+        <Contact currentSection = {scrollPosition.currentSection}/>
       </main>
       <Footer/>
     </div>

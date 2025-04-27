@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import { ScrollPosition } from "../types";
 
 export function useScrollPosition() {
-  const [scrollPosition, setScrollPosition] = useState({
+  const [scrollPosition, setScrollPosition] = useState<ScrollPosition>({
     x: 0,
     y: 0,
     currentSection: "home",
@@ -14,11 +15,11 @@ export function useScrollPosition() {
       setScrollPosition((prev)=>{
         let currentSection = "home";
 
-        if (window.scrollY > bodyHeight * 0.5 && window.scrollY < bodyHeight * 1.5) {
+        if (window.scrollY > bodyHeight * 0.2 && window.scrollY < bodyHeight * 1.2) {
           currentSection = "projects";
-        }else if (window.scrollY > bodyHeight * 1.5 && window.scrollY < bodyHeight * 2.5) {
+        }else if (window.scrollY > bodyHeight * 1.2 && window.scrollY < bodyHeight * 2.2) {
           currentSection = "about";
-        }else if (window.scrollY > bodyHeight * 2.5 && window.scrollY < bodyHeight * 3.5) {
+        }else if (window.scrollY > bodyHeight * 2.2 && window.scrollY < bodyHeight * 3.2) {
           currentSection = "contact";
         }
 

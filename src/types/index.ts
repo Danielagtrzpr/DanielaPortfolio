@@ -4,3 +4,9 @@
   link: string;
   image: string;
 };
+
+export type ScrollPosition ={
+  x: number;
+  y: number;
+  currentSection: string;
+}

@@ -1,10 +1,26 @@
 import { Github, Globe, Linkedin, Locate, Mail } from "lucide-react"
 import Button from "./Button"
 import { ButtonType } from "../enums"
+import { useEffect, useRef } from "react"
 
-function Contact() {
+type ContactProps = {
+  currentSection: string
+}
+
+function Contact({currentSection}: ContactProps) {
+
+
+  const contactRef = useRef<HTMLElement>(null);
+  
+  useEffect(() => {
+    if (currentSection === "contact") {
+      contactRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [currentSection]);
+
+
   return (
-    <section id="contact" className="relative inset-0 w-full px-8 flex flex-col justify-center items-center h-screen text-xs md:text-base lg:text-lg">
+    <section id="contact" ref={contactRef} className="relative inset-0 w-full px-8 flex flex-col justify-center items-center h-screen text-xs md:text-base lg:text-lg">
         <div className="w-fit text-background grid md:grid-cols-2 lg:w-full lg:px-40 md:space-x-4">
           <div className="flex flex-col justify-center space-y-4 bg-primary rounded-xl p-4 md:p-8">
             <h2 className="font-bold text-center py-2 md:text-left">Contact Information</h2>

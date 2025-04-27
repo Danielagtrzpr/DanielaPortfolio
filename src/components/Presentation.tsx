@@ -2,10 +2,24 @@ import { ChevronDown } from "lucide-react";
 import profilePic from "../assets/foto.jpeg";
 import { ButtonType } from "../enums";
 import Button from "./Button";
+import { useEffect, useRef } from "react";
 
-function Presentation() {
+type PresentationProps = {
+  currentSection: string
+}
+
+function Presentation({currentSection}: PresentationProps) {
+
+  const presentationRef = useRef<HTMLElement>(null);
+  
+  useEffect(() => {
+    if (currentSection === "home") {
+      presentationRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [currentSection]);
+
   return (
-    <section id="home" className="relative inset-0 w-full flex flex-col justify-center h-screen">
+    <section id="home" ref={presentationRef} className="relative inset-0 w-full flex flex-col justify-center h-screen">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-90 h-90 bg-apple-gradient opacity-10 rounded-full filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/3 right-1/3 w-60 h-60 bg-apple-gradient opacity-10 rounded-full filter blur-3xl animate-pulse [animation-delay:2s]"></div>

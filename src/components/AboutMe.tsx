@@ -1,18 +1,31 @@
 import { Binary, BookLock, BugPlay, Code, Code2, Computer, SquareTerminal } from "lucide-react";
-import img11 from "../assets/PlaygroundImage11.jpg";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-function AboutMe() {
+type AboutMeProps = {
+  currentSection: string
+}
+
+function AboutMe({currentSection}: AboutMeProps) {
   const [image, setImage] = useState<string>("");
   
+
+  const aboutMeRef = useRef<HTMLElement>(null);
+    
   useEffect(() => {
-    const randomSeed = Math.floor(Math.random() * 1000); // Opcional: para randomizar
+    if (currentSection === "about") {
+      aboutMeRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [currentSection]);
+
+
+  useEffect(() => {
+    const randomSeed = Math.floor(Math.random() * 1000);
     const imageUrl = `https://picsum.photos/seed/${randomSeed}/2000`;
     setImage(imageUrl);
   }, []);
     
   return (
-    <section id="about" className="relative px-8 inset-0 w-full flex flex-col justify-center h-screen">
+    <section id="about" ref={aboutMeRef} className="relative px-8 inset-0 w-full flex flex-col justify-center h-screen">
       <div className="grid text-xs overflow-y-scroll no-scrollbar md:m-8 md:gap-8 md:grid-cols-2 md:text-base">
         <div className="flex flex-col flex-1/2 items-center justify-center">
           <p className="text-justify mt-4 text-gray-500">
