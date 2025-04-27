@@ -3,7 +3,7 @@ import { motion } from "motion/react"
 
 function Footer() {
   return (
-    <footer className="relative flex border-t border-primary/30 h-screen text-xs text-background-dark dark:text-background md:text-base md:py-12 md:h-auto ">      
+    <footer className="relative flex border-t border-primary/30 h-screen text-xs text-background-dark dark:text-background mt-20 md:text-base md:py-12 md:h-auto ">      
       <div className="mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>

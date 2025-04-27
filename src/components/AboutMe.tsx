@@ -16,7 +16,7 @@ function AboutMe() {
     
   return (
     <Section id = "about" ref = {aboutMeRef}>
-      <div className="grid text-xs overflow-y-scroll no-scrollbar md:m-8 md:gap-8 md:grid-cols-2 md:text-base">
+      <div className="grid text-xs m-4 overflow-y-scroll no-scrollbar md:m-8 md:gap-8 md:grid-cols-2 md:text-base">
         <div className="flex flex-col flex-1/2 items-center justify-center">
           <p className="text-justify mt-4 text-gray-500">
           I'm a passionate frontend developer specializing in React and React Native. 

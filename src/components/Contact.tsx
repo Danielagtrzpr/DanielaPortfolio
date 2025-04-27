@@ -9,7 +9,7 @@ function Contact() {
   const contactRef = useRef<HTMLDivElement>(null);
   return (
     <Section id = {"contact"} ref={contactRef}>
-        <div className="w-fit text-background grid md:grid-cols-2 lg:w-full lg:px-40 md:space-x-4">
+        <div className="w-full p-4 text-background text-sm grid md:grid-cols-2 lg:w-full lg:px-40 md:space-x-4">
           <div className="flex flex-col justify-center space-y-4 bg-primary rounded-xl p-4 md:p-8">
             <h2 className="font-bold text-center py-2 md:text-left">Contact Information</h2>
             <ul className="flex flex-col w-full justify-center gap-4">
