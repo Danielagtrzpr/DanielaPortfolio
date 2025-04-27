@@ -1,25 +1,14 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { DynamicGrid } from "./DynamicGrid";
+import Section from "./Section";
 
-type ProjectsProps = {
-  currentSection: string
-}
 
-function Projects({currentSection}: ProjectsProps) {
-
-  const projectsRef = useRef<HTMLElement>(null);
-  
-  useEffect(() => {
-    if (currentSection === "projects") {
-      projectsRef.current?.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [currentSection]);
-
+function Projects() {
+  const projectsRef = useRef<HTMLDivElement>(null);
   return (
-    <section id="projects" ref={projectsRef} className="relative inset-0 w-full flex flex-col justify-center h-screen">
-      {/* <div className="absolute -top-8 inset-0 h-16 blur-lg z-10 bg-background/90 dark:bg-background-dark/90 "/> */}
+    <Section  id="projects" ref={projectsRef}>
       <DynamicGrid/>
-    </section>
+    </Section>
   );
 }
 

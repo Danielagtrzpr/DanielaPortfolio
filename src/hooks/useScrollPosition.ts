@@ -15,11 +15,11 @@ export function useScrollPosition() {
       setScrollPosition((prev)=>{
         let currentSection = "home";
 
-        if (window.scrollY > bodyHeight * 0.2 && window.scrollY < bodyHeight * 1.2) {
+        if (window.scrollY > bodyHeight * 0.1 && window.scrollY < bodyHeight * 1.1) {
           currentSection = "projects";
-        }else if (window.scrollY > bodyHeight * 1.2 && window.scrollY < bodyHeight * 2.2) {
+        }else if (window.scrollY > bodyHeight * 1.1 && window.scrollY < bodyHeight * 2.1) {
           currentSection = "about";
-        }else if (window.scrollY > bodyHeight * 2.2 && window.scrollY < bodyHeight * 3.2) {
+        }else if (window.scrollY > bodyHeight * 2.1) {
           currentSection = "contact";
         }
 

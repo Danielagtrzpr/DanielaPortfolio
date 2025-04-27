@@ -13,7 +13,7 @@ export const DynamicGrid = () => {
   }
   return (
     <>
-      <div className="px-8 grid grid-cols-1 auto-rows-[300px] gap-4 overflow-y-scroll no-scrollbar md:grid-cols-3 ">
+      <div className="px-8 pt-60 grid grid-cols-1 auto-rows-[300px] gap-4 overflow-y-scroll no-scrollbar md:grid-cols-3 ">
         {projects.map((item, index) => {
           const isEvenRow = Math.floor(index / 2) % 2 === 0;
           const isFirstInPair = index % 2 === 0;

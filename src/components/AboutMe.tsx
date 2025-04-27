@@ -1,23 +1,13 @@
 import { Binary, BookLock, BugPlay, Code, Code2, Computer, SquareTerminal } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import Section from "./Section";
 
-type AboutMeProps = {
-  currentSection: string
-}
 
-function AboutMe({currentSection}: AboutMeProps) {
+function AboutMe() {
   const [image, setImage] = useState<string>("");
+
+  const aboutMeRef = useRef<HTMLDivElement>(null);
   
-
-  const aboutMeRef = useRef<HTMLElement>(null);
-    
-  useEffect(() => {
-    if (currentSection === "about") {
-      aboutMeRef.current?.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [currentSection]);
-
-
   useEffect(() => {
     const randomSeed = Math.floor(Math.random() * 1000);
     const imageUrl = `https://picsum.photos/seed/${randomSeed}/2000`;
@@ -25,7 +15,7 @@ function AboutMe({currentSection}: AboutMeProps) {
   }, []);
     
   return (
-    <section id="about" ref={aboutMeRef} className="relative px-8 inset-0 w-full flex flex-col justify-center h-screen">
+    <Section id = "about" ref = {aboutMeRef}>
       <div className="grid text-xs overflow-y-scroll no-scrollbar md:m-8 md:gap-8 md:grid-cols-2 md:text-base">
         <div className="flex flex-col flex-1/2 items-center justify-center">
           <p className="text-justify mt-4 text-gray-500">
@@ -70,7 +60,7 @@ function AboutMe({currentSection}: AboutMeProps) {
           <img src={image} alt="" className="w-full h-full object-cover rounded-4xl" />
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
 

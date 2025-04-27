@@ -2,6 +2,8 @@ import { Code, MenuIcon } from "lucide-react";
 import { motion } from "motion/react";
 import ThemeToggle from "./ThemeToggle";
 import { ScrollPosition } from "../types";
+import { AppContext } from "../api/AppContext";
+import { useContext } from "react";
 
 // Navigation links
 const navLinks = [
@@ -11,12 +13,9 @@ const navLinks = [
   { name: "Contact", href: "#contact", id: "contact" },
 ];
 
-type HeaderProps = {
-  scrollPosition: ScrollPosition;
-}
 
-function Header({scrollPosition}:HeaderProps) {
-
+function Header() {
+  const {scrollPosition} = useContext(AppContext);
   const isScrolled = scrollPosition.y > 50;
 
   return (
